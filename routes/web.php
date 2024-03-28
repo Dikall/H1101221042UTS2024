@@ -17,13 +17,7 @@ use App\Http\Controllers\Presensi;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/', function () {
-    return view('main');
-});
 
 Route::get('gaji', [Gaji::class, 'index']);
 Route::get('home', [Home::class, 'index']);

@@ -131,34 +131,32 @@
                                     name="firstname"
                                     placeholder="John M. Doe"
                                 />
-                                <label for="email"
-                                    ><i class="fa fa-envelope"></i> Email</label
+                                <label for="fname"
+                                    ><i class="fa fa-user"></i> Full Name</label
                                 >
                                 <input
                                     type="text"
-                                    id="email"
-                                    name="email"
-                                    placeholder="john@example.com"
+                                    id="fname"
+                                    name="firstname"
+                                    placeholder="John M. Doe"
                                 />
-                                <label for="adr"
-                                    ><i class="fa fa-address-card-o"></i>
-                                    Address</label
+                                <label for="fname"
+                                    ><i class="fa fa-user"></i> Full Name</label
                                 >
                                 <input
                                     type="text"
-                                    id="adr"
-                                    name="address"
-                                    placeholder="542 W. 15th Street"
+                                    id="fname"
+                                    name="firstname"
+                                    placeholder="John M. Doe"
                                 />
-                                <label for="city"
-                                    ><i class="fa fa-institution"></i>
-                                    City</label
+                                <label for="fname"
+                                    ><i class="fa fa-user"></i> Full Name</label
                                 >
                                 <input
                                     type="text"
-                                    id="city"
-                                    name="city"
-                                    placeholder="New York"
+                                    id="fname"
+                                    name="firstname"
+                                    placeholder="John M. Doe"
                                 />
 
                                 <div class="row">
