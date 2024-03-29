@@ -1,183 +1,238 @@
 @extends('layout.main')
 @section('content')
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <style>
-            body {
-                font-family: Arial;
-                font-size: 17px;
-                padding: 8px;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            .row {
-                display: -ms-flexbox; /* IE10 */
-                display: flex;
-                -ms-flex-wrap: wrap; /* IE10 */
-                flex-wrap: wrap;
-                margin: 0 -16px;
-            }
-
-            .col-25 {
-                -ms-flex: 25%; /* IE10 */
-                flex: 25%;
-            }
-
-            .col-50 {
-                -ms-flex: 50%; /* IE10 */
-                flex: 50%;
-            }
-
-            .col-75 {
-                -ms-flex: 75%; /* IE10 */
-                flex: 75%;
-            }
-
-            .col-25,
-            .col-50,
-            .col-75 {
-                padding: 0 16px;
-            }
-
-            .container {
-                background-color: #f2f2f2;
-                padding: 5px 20px 15px 20px;
-                border: 1px solid lightgrey;
-                border-radius: 3px;
-            }
-
-            input[type="text"] {
-                width: 100%;
-                margin-bottom: 20px;
-                padding: 12px;
-                border: 1px solid #ccc;
-                border-radius: 3px;
-            }
-
-            label {
-                margin-bottom: 10px;
-                display: block;
-            }
-
-            .icon-container {
-                margin-bottom: 20px;
-                padding: 7px 0;
-                font-size: 24px;
-            }
-
-            .btn {
-                background-color: #04aa6d;
-                color: white;
-                padding: 12px;
-                margin: 10px 0;
-                border: none;
-                width: 100%;
-                border-radius: 3px;
-                cursor: pointer;
-                font-size: 17px;
-            }
-
-            .btn:hover {
-                background-color: #45a049;
-            }
-
-            a {
-                color: #2196f3;
-            }
-
-            hr {
-                border: 1px solid lightgrey;
-            }
-
-            span.price {
-                float: right;
-                color: grey;
-            }
-
-            /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-            @media (max-width: 800px) {
-                .row {
-                    flex-direction: column-reverse;
-                }
-                .col-25 {
-                    margin-bottom: 20px;
-                }
-            }
-        </style>
-    </head>
-        <body>
-        <div class="row">
-            <div class="col-75">
-                <div class="container">
-                    <form action="/action_page.php">
-                        <div class="row">
-                            <div class="col-50">
-                                <h3 style="text-align: center;">Form Gaji Pegawai</h3>
-                                <div class="row">
-                                    <div class="col-25">
-                                        <label for="fname">
-                                            <i class="fa fa-user"></i> Nama Pegawai</label>
-                                        <input
-                                            type="text"
-                                            id="fname"
-                                            name="firstname"
-                                            placeholder="M. Radikal"
-                                        />
-                                    </div>
-                                    <div class="col-25">
-                                        <label for="fname">
-                                            <i class="fas fa-address-card"></i> Jabatan</label>
-                                        <input
-                                            type="text"
-                                            id="fname"
-                                            name="firstname"
-                                            placeholder="Manager"
-                                        />
-                                    </div>
-                                    <div class="col-25">
-                                        <label for="fname">
-                                            <i class="fas fa-money-bill-wave"></i> Gaji</label>
-                                        <input
-                                            type="text"
-                                            id="fname"
-                                            name="firstname"
-                                            placeholder="20.000.000"
-                                        />
-                                    </div>
-                                    <div class="col-25">
-                                        <label for="fname">
-                                            <i class="fas fa-user-graduate"></i> Pendidikan</label>
-                                        <input
-                                            type="text"
-                                            id="fname"
-                                            name="firstname"
-                                            placeholder="Profesor"
-                                        />
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <input
-                            type="submit"
-                            value="Continue to checkout"
-                            class="btn"
-                        />
-                    </form>
-                </div>
+<div class="card shadow-lg mx-4 card-profile-bottom">
+      <div class="card-body p-3">
+        <div class="row gx-4">
+          <div class="col-auto">
+            <div class="avatar avatar-xl position-relative">
+              <i class="ni ni-single-copy-04 text-warning" style="font-size: 3.5rem;"></i>
             </div>
+          </div>
+          <div class="col-auto my-auto">
+            <div class="h-100">
+              <h4 class="mb-1">
+                Daftar Gaji Karyawan
+              </h4>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+            <div class="nav-wrapper position-relative end-0">
+              <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "  href="/profile">
+                    <span class="ms-2">Profile</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "  href="/gaji">
+                    <span class="ms-2">Salary</span>
+                  </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "  href="/home">
+                    <span class="ms-2">Home</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </body>
-</html>
-
+      </div>
+    </div>
+<div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-header pb-0">
+              <h6>GAJI PEGAWAI</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Pegawai</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Jabatan</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gaji</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pendidikan</th>
+                      <th class="text-secondary opacity-7"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Muhammad Radikal</h6>
+                            <p class="text-xs text-secondary mb-0">Dikal@satu.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Manager</p>
+                        <p class="text-xs text-secondary mb-0">Organization</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">5.000.000</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">Magister</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="/profile" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user2">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Dimassan</h6>
+                            <p class="text-xs text-secondary mb-0">Mas@dua.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Programator</p>
+                        <p class="text-xs text-secondary mb-0">Developer</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">3.000.000</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">Magister</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user3">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Ricky Pratama</h6>
+                            <p class="text-xs text-secondary mb-0">Ricky@tiga.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Executive</p>
+                        <p class="text-xs text-secondary mb-0">Projects</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">2.500.000</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">Magister</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="user4">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Insan Hadid</h6>
+                            <p class="text-xs text-secondary mb-0">Insan@empat.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Programator</p>
+                        <p class="text-xs text-secondary mb-0">Developer</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">3.000.000</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">Magister</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user5">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Carsen Wilmer</h6>
+                            <p class="text-xs text-secondary mb-0">Ecen@lima.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Manager</p>
+                        <p class="text-xs text-secondary mb-0">Executive</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">3.500.000</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">Professor</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="user6">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Pheterson Ferry Fernando</h6>
+                            <p class="text-xs text-secondary mb-0">Pheter@enam.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Programtor</p>
+                        <p class="text-xs text-secondary mb-0">Developer</p>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-secondary text-xs font-weight-bold">3.500.000</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">Magister</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 @endsection
